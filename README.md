@@ -1,6 +1,4 @@
-# 💍 Application Web - Mariage Matt & Bébé So
-
-Application web privée pour gérer tous les aspects financiers et organisationnels du mariage.
+e.
 
 ## 🚀 Installation
 

@@ -1,0 +1,16 @@
+# Protection des fichiers sensibles
+<FilesMatch "^(config|includes|sql)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protection du dossier uploads (optionnel - décommenter si nécessaire)
+# <Directory "assets/uploads">
+#     Options -Indexes
+# </Directory>
+
+# Redirection vers index.php si le fichier n'existe pas (pour les URLs propres)
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
